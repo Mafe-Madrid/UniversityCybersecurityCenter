@@ -1,0 +1,526 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #080e1f;
+    color: #f5f7fa;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 30px;
+
+    background-color: #111827;
+
+    border-bottom: 1px solid #243041;
+}
+
+.logo {
+    margin: 0;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.language button {
+    padding: 8px 12px;
+
+    background-color: transparent;
+
+    color: #f5f7fa;
+
+    border: 1px solid #38bdf8;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.language button:hover {
+    background-color: #38bdf8;
+
+    color: #08101f;
+}
+
+
+/* =========================================
+   SECCIÓN PRINCIPAL / HERO
+========================================= */
+
+.hero {
+    text-align: center;
+
+    padding: 65px 20px 60px;
+
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #111827
+    );
+}
+
+.phrase {
+    max-width: 750px;
+
+    margin: 0 auto 35px;
+
+    padding: 18px 25px;
+
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.04
+    );
+
+    border-left: 4px solid #38bdf8;
+
+    border-radius: 10px;
+}
+
+.phrase p {
+    margin: 0 0 10px;
+
+    font-style: italic;
+}
+
+.phrase span {
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+.hero h2 {
+    margin: 0;
+
+    color: #38bdf8;
+
+    font-size: 42px;
+}
+
+.hero-description {
+    margin-top: 15px;
+
+    color: #cbd5e1;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
+
+main {
+    width: 100%;
+}
+
+
+/* =========================================
+   SECCIÓN DE MÓDULOS
+========================================= */
+
+.modules-section {
+    padding: 60px 20px 80px;
+
+    background-color: #080e1f;
+
+    overflow: hidden;
+}
+
+.modules-title {
+    margin: 0 0 45px;
+
+    text-align: center;
+
+    color: #38bdf8;
+
+    font-size: 32px;
+}
+
+
+/* =========================================
+   CARRUSEL
+========================================= */
+
+.carousel {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 1200px;
+
+    height: 500px;
+
+    margin: 0 auto;
+}
+
+.carousel-container {
+    position: relative;
+
+    width: 850px;
+    height: 450px;
+
+    perspective: 1200px;
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.module-card {
+    position: absolute;
+
+    top: 10px;
+    left: 50%;
+
+    width: 420px;
+    height: 420px;
+
+    padding: 20px;
+
+    background-color: #111827;
+
+    border: 1px solid #263449;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    opacity: 0;
+
+    transform:
+        translateX(-50%)
+        scale(0.65);
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease,
+        filter 0.5s ease;
+
+    pointer-events: none;
+}
+
+
+/* TARJETA CENTRAL */
+
+.module-card.active {
+    z-index: 5;
+
+    opacity: 1;
+
+    transform:
+        translateX(-50%)
+        scale(1);
+
+    pointer-events: auto;
+
+    box-shadow:
+        0 20px 50px
+        rgba(56, 189, 248, 0.22);
+}
+
+
+/* TARJETA IZQUIERDA */
+
+.module-card.previous {
+    z-index: 2;
+
+    opacity: 0.45;
+
+    transform:
+        translateX(-140%)
+        scale(0.75)
+        rotateY(28deg);
+
+    filter: brightness(0.65);
+}
+
+
+/* TARJETA DERECHA */
+
+.module-card.next-card {
+    z-index: 2;
+
+    opacity: 0.45;
+
+    transform:
+        translateX(40%)
+        scale(0.75)
+        rotateY(-28deg);
+
+    filter: brightness(0.65);
+}
+
+
+/* =========================================
+   ESPACIO PARA LAS IMÁGENES
+========================================= */
+
+.module-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 220px;
+
+    margin-bottom: 20px;
+
+    background-color: #1e293b;
+
+    color: #64748b;
+
+    border-radius: 16px;
+}
+
+
+/* =========================================
+   TEXTO DE LOS MÓDULOS
+========================================= */
+
+.module-card h3 {
+    margin: 10px 0;
+
+    color: #38bdf8;
+
+    font-size: 26px;
+}
+
+.module-card p {
+    margin: 0 0 22px;
+
+    color: #cbd5e1;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   BOTÓN DE CADA MÓDULO
+========================================= */
+
+.module-button {
+    padding: 11px 22px;
+
+    background-color: transparent;
+
+    color: #38bdf8;
+
+    border: 1px solid #38bdf8;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.module-button:hover {
+    background-color: #38bdf8;
+
+    color: #08101f;
+}
+
+
+/* =========================================
+   FLECHAS DEL CARRUSEL
+========================================= */
+
+.carousel-button {
+    position: absolute;
+
+    top: 50%;
+
+    z-index: 10;
+
+    width: 55px;
+    height: 55px;
+
+    background-color: #111827;
+
+    color: #38bdf8;
+
+    border: 1px solid #38bdf8;
+
+    border-radius: 50%;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    transform: translateY(-50%);
+
+    transition: 0.3s;
+}
+
+.carousel-button:hover {
+    background-color: #38bdf8;
+
+    color: #08101f;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+footer {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background-color: #111827;
+
+    border-top: 1px solid #243041;
+
+    color: #94a3b8;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .carousel {
+        height: 470px;
+    }
+
+    .carousel-container {
+        width: 650px;
+    }
+
+    .module-card {
+        width: 360px;
+        height: 400px;
+    }
+
+    .module-card.previous {
+        transform:
+            translateX(-125%)
+            scale(0.7)
+            rotateY(25deg);
+    }
+
+    .module-card.next-card {
+        transform:
+            translateX(25%)
+            scale(0.7)
+            rotateY(-25deg);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 22px;
+
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .modules-title {
+        font-size: 27px;
+    }
+
+    .carousel {
+        height: 450px;
+    }
+
+    .carousel-container {
+        width: 100%;
+    }
+
+    .module-card {
+        width: 290px;
+        height: 380px;
+    }
+
+    .module-image {
+        height: 190px;
+    }
+
+    .module-card.previous,
+    .module-card.next-card {
+        opacity: 0;
+    }
+
+    .carousel-button {
+        width: 45px;
+        height: 45px;
+
+        font-size: 20px;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+
+}
