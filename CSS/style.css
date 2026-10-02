@@ -19,121 +19,545 @@ body {
 
 
 /* =========================================
-   ENCABEZADO
+   HERO PRINCIPAL
 ========================================= */
 
-.header {
+.cyber-hero {
+    position: relative;
+
+    min-height: 850px;
+
+    background-image:
+        linear-gradient(
+            rgba(3, 12, 28, 0.30),
+            rgba(3, 12, 28, 0.90)
+        ),
+        url("../IMAGENES/Hacker\ Encabezado.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+
+/* Capa oscura adicional */
+
+.cyber-hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(5, 15, 35, 0.10),
+            rgba(5, 15, 35, 0.45),
+            rgba(5, 15, 35, 0.90)
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.hero-header {
+    position: relative;
+
+    z-index: 5;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
-    padding: 20px 30px;
-
-    background-color: #111827;
-
-    border-bottom: 1px solid #243041;
+    padding: 35px 70px;
 }
 
-.logo {
+
+.site-title {
     margin: 0;
 
-    font-size: 28px;
-    font-weight: bold;
+    color: #ffffff;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
 }
+
+
+.site-title span {
+    color: #38bdf8;
+}
+
+
+/* Línea debajo del título */
+
+.site-title::after {
+    content: "";
+
+    display: block;
+
+    width: 85px;
+
+    height: 3px;
+
+    margin-top: 15px;
+
+    background-color: #22d3ee;
+
+    border-radius: 10px;
+}
+
+
+/* =========================================
+   IDIOMAS
+========================================= */
 
 .language {
     display: flex;
-    align-items: center;
 
-    gap: 8px;
+    gap: 12px;
 }
 
+
 .language button {
-    padding: 8px 12px;
+    min-width: 55px;
 
-    background-color: transparent;
+    padding: 10px 15px;
 
-    color: #f5f7fa;
+    background-color: rgba(
+        8,
+        20,
+        40,
+        0.65
+    );
 
-    border: 1px solid #38bdf8;
+    color: #ffffff;
 
-    border-radius: 8px;
+    border: 1px solid #356382;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+
+.language button:hover,
+.language-active {
+    border-color: #38bdf8;
+
+    color: #38bdf8;
+
+    box-shadow:
+        0 0 12px
+        rgba(56, 189, 248, 0.30);
+}
+
+
+/* =========================================
+   CONTENIDO CENTRAL
+========================================= */
+
+.hero-content {
+    position: relative;
+
+    z-index: 3;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 300px 20px 80px;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   TÍTULO CIBERSEGURIDAD
+========================================= */
+
+.hero-title {
+    margin: 0;
+
+    font-size: 68px;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #22d3ee,
+            #ffffff
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+.hero-description {
+    margin: 14px 0 0;
+
+    color: #dbeafe;
+
+    font-size: 21px;
+}
+
+
+.hero-line {
+    width: 75px;
+
+    height: 3px;
+
+    margin: 22px 0 28px;
+
+    background-color: #22d3ee;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================
+   CARRUSEL DE FRASES
+========================================= */
+
+.quote-carousel {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    width: 100%;
+
+    max-width: 1250px;
+}
+
+
+/* TARJETA */
+
+.quote-card {
+    position: relative;
+
+    width: min(
+        900px,
+        75vw
+    );
+
+    min-height: 180px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 35px 60px;
+
+    background:
+        rgba(
+            10,
+            31,
+            58,
+            0.82
+        );
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid #16658a;
+
+    border-left: 4px solid #22d3ee;
+
+    border-right: 4px solid #22d3ee;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.35);
+}
+
+
+/* COMILLAS */
+
+.quote-symbol {
+    position: absolute;
+    color: #38bdf8;
+    font-size: 55px;
+    opacity: 0.65;
+}
+
+.quote-start {
+    top: 20px;
+    left: 35px;
+}
+
+.quote-end {
+    bottom: 35px;
+    right: 35px;
+}
+
+
+/* FRASE */
+
+.quote-card p {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 20px;
+
+    line-height: 1.6;
+
+    font-style: italic;
+}
+
+
+/* AUTOR */
+
+.quote-author {
+    margin-top: 15px;
+
+    color: #b6c9dd;
+
+    font-size: 16px;
+}
+
+
+.quote-small-line {
+    width: 50px;
+
+    height: 3px;
+
+    margin-top: 15px;
+
+    background-color: #22d3ee;
+
+    border-radius: 20px;
+}
+
+
+/* =========================================
+   FLECHAS
+========================================= */
+
+.quote-arrow {
+    flex-shrink: 0;
+
+    width: 58px;
+
+    height: 58px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        rgba(
+            9,
+            42,
+            73,
+            0.85
+        );
+
+    color: #67e8f9;
+
+    border: 1px solid #287ca5;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 27px;
+
+    transition: 0.3s;
+}
+
+
+.quote-arrow:hover {
+    background-color: #0c4a6e;
+
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 18px
+        rgba(34, 211, 238, 0.30);
+}
+
+
+/* =========================================
+   PUNTOS DEL CARRUSEL
+========================================= */
+
+.quote-dots {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+
+.quote-dot {
+    width: 11px;
+
+    height: 11px;
+
+    padding: 0;
+
+    background-color: #475569;
+
+    border: none;
+
+    border-radius: 50%;
 
     cursor: pointer;
 
     transition: 0.3s;
 }
 
-.language button:hover {
-    background-color: #38bdf8;
 
-    color: #08101f;
+.quote-dot:hover {
+    background-color: #7dd3fc;
 }
 
+
+.quote-dot.active-dot {
+    background-color: #22d3ee;
+
+    transform: scale(1.25);
+}
+#quoteText,
+#quoteAuthor {
+    transition:
+        opacity
+        0.18s
+        ease;
+}
 
 /* =========================================
-   SECCIÓN PRINCIPAL / HERO
+   RESPONSIVE
 ========================================= */
 
-.hero {
-    text-align: center;
+@media (max-width: 800px) {
 
-    padding: 65px 20px 60px;
+    .hero-header {
+        padding: 25px;
 
-    background: linear-gradient(
-        135deg,
-        #0f172a,
-        #111827
-    );
+        align-items: flex-start;
+    }
+
+
+    .site-title {
+        font-size: 25px;
+    }
+
+
+    .hero-content {
+        padding-top: 260px;
+    }
+
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+
+    .hero-description {
+        font-size: 17px;
+    }
+
+
+    .quote-card {
+        width: 75vw;
+
+        padding:
+            30px
+            25px;
+    }
+
+
+    .quote-card p {
+        font-size: 17px;
+    }
+
+
+    .quote-arrow {
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 20px;
+    }
+
 }
 
-.phrase {
-    max-width: 750px;
 
-    margin: 0 auto 35px;
+@media (max-width: 550px) {
 
-    padding: 18px 25px;
+    .hero-header {
+        flex-direction: column;
 
-    background-color: rgba(
-        255,
-        255,
-        255,
-        0.04
-    );
+        gap: 20px;
+    }
 
-    border-left: 4px solid #38bdf8;
 
-    border-radius: 10px;
+    .hero-title {
+        font-size: 39px;
+    }
+
+
+    .quote-carousel {
+        gap: 7px;
+    }
+
+
+    .quote-card {
+        width: 72vw;
+
+        min-height: 210px;
+    }
+
+
+    .quote-arrow {
+        width: 38px;
+
+        height: 38px;
+    }
+
 }
-
-.phrase p {
-    margin: 0 0 10px;
-
-    font-style: italic;
-}
-
-.phrase span {
-    color: #94a3b8;
-
-    font-size: 14px;
-}
-
-.hero h2 {
-    margin: 0;
-
-    color: #38bdf8;
-
-    font-size: 42px;
-}
-
-.hero-description {
-    margin-top: 15px;
-
-    color: #cbd5e1;
-
-    font-size: 18px;
-}
-
 
 /* =========================================
    CONTENIDO PRINCIPAL

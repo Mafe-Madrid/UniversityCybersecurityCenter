@@ -12,49 +12,120 @@
 
 <body>
 
-    <!-- ENCABEZADO -->
-    <header class="header">
+    <!-- =========================================
+        HERO / ENCABEZADO PRINCIPAL
+    ========================================= -->
 
-        <h1 class="logo">
-            University Cybersecurity Center
-        </h1>
+    <section class="cyber-hero">
 
-        <div class="language">
-            <button id="btn-es">ES</button>
-            <span>|</span>
-            <button id="btn-en">EN</button>
-        </div>
+        <!-- Barra superior -->
+        <header class="hero-header">
 
-    </header>
+            <h1 class="site-title">
+                University
+                <span>Cybersecurity Center</span>
+            </h1>
+
+            <div class="language">
+                <button id="btn-es" class="language-active">
+                    ES
+                </button>
+
+                <button id="btn-en">
+                    EN
+                </button>
+            </div>
+
+        </header>
 
 
-    <!-- SECCIÓN PRINCIPAL -->
-    <section class="hero">
+        <!-- Contenido central -->
+        <div class="hero-content">
 
-        <div class="phrase">
+            <h2 class="hero-title">
+                Ciberseguridad
+            </h2>
 
-            <p>
-                «Los aficionados hackean sistemas;
-                los profesionales hackean personas»
+            <p class="hero-description">
+                Aprende a proteger tu información,
+                tus cuentas y tus dispositivos.
             </p>
 
-            <span>
-                Bruce Schneier
-            </span>
+            <div class="hero-line"></div>
+
+
+            <!-- CARRUSEL DE FRASES -->
+            <div class="quote-carousel">
+
+                <button
+                    class="quote-arrow"
+                    id="quotePrev"
+                    aria-label="Frase anterior"
+                >
+                    &#10094;
+                </button>
+
+
+                <div class="quote-card">
+
+                    <span class="quote-symbol quote-start">
+                        “
+                    </span>
+
+                    <p id="quoteText">
+                        Los aficionados hackean sistemas;
+                        los profesionales hackean personas.
+                    </p>
+
+                    <span class="quote-symbol quote-end">
+                        ”
+                    </span>
+
+                    <span
+                        class="quote-author"
+                        id="quoteAuthor"
+                    >
+                        Bruce Schneier
+                    </span>
+                    <div class="quote-small-line"></div>
+
+                </div>
+
+
+                <button
+                    class="quote-arrow"
+                    id="quoteNext"
+                    aria-label="Frase siguiente"
+                >
+                    &#10095;
+                </button>
+
+            </div>
+
+
+            <!-- Indicadores -->
+            <div class="quote-dots">
+
+                <button
+                    class="quote-dot active-dot"
+                    data-quote="0"
+                ></button>
+
+                <button
+                    class="quote-dot"
+                    data-quote="1"
+                ></button>
+
+                <button
+                    class="quote-dot"
+                    data-quote="2"
+                ></button>
+
+            </div>
 
         </div>
 
-        <h2>
-            Ciberseguridad
-        </h2>
-
-        <p class="hero-description">
-            Aprende a proteger tu información,
-            tus cuentas y tus dispositivos.
-        </p>
-
     </section>
-
 
     <!-- CONTENIDO PRINCIPAL -->
     <main>
