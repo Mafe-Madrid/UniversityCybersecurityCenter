@@ -1,0 +1,593 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+.module-main {
+    width: 100%;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            180deg,
+            #07101f,
+            #081426
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.module-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 22px 55px;
+
+    background-color: #07101f;
+
+    border-bottom: 1px solid #1f3b55;
+}
+
+
+.module-brand h1 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 26px;
+}
+
+
+.module-brand h1 span {
+    color: #38bdf8;
+}
+
+
+.module-language {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.module-language button {
+    padding: 8px 14px;
+
+    background: transparent;
+
+    color: white;
+
+    border: 1px solid #38bdf8;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.module-language button:hover,
+.module-language .language-active {
+    background: #38bdf8;
+
+    color: #07101f;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.module-hero {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+
+    gap: 45px;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 55px 60px;
+}
+
+
+.module-number {
+    display: inline-block;
+
+    padding: 8px 17px;
+
+    margin-bottom: 18px;
+
+    color: #38bdf8;
+
+    border: 1px solid #38bdf8;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+}
+
+
+.module-hero-text h2 {
+    margin: 0 0 18px;
+
+    color: white;
+
+    font-size: 58px;
+}
+
+
+.module-hero-text p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #bfd0e3;
+
+    font-size: 19px;
+
+    line-height: 1.6;
+}
+
+
+.module-hero-image {
+    height: 320px;
+
+    padding: 8px;
+
+    overflow: hidden;
+
+    border: 1px solid
+        rgba(56, 189, 248, 0.45);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 0 25px
+        rgba(56, 189, 248, 0.12);
+}
+
+
+.module-hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 17px;
+}
+
+
+/* =========================================
+   SUBSECCIONES
+========================================= */
+
+.subsections-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 30px;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 20px 60px 45px;
+}
+
+
+.subsection-card {
+    display: grid;
+
+    grid-template-columns:
+        1.05fr 0.95fr;
+
+    align-items: center;
+
+    gap: 30px;
+
+    min-height: 390px;
+
+    padding: 35px;
+
+    border-radius: 24px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.subsection-one {
+    background:
+        linear-gradient(
+            135deg,
+            #07162b,
+            #061224
+        );
+
+    border:
+        1px solid
+        rgba(34, 211, 238, 0.65);
+}
+
+
+.subsection-two {
+    background:
+        linear-gradient(
+            135deg,
+            #130d2f,
+            #15103a
+        );
+
+    border:
+        1px solid
+        rgba(139, 92, 246, 0.75);
+}
+
+
+.subsection-card:hover {
+    transform: translateY(-5px);
+}
+
+
+.subsection-one:hover {
+    box-shadow:
+        0 0 25px
+        rgba(34, 211, 238, 0.15);
+}
+
+
+.subsection-two:hover {
+    box-shadow:
+        0 0 25px
+        rgba(139, 92, 246, 0.18);
+}
+
+
+.subsection-label {
+    display: inline-block;
+
+    padding: 7px 15px;
+
+    margin-bottom: 15px;
+
+    background:
+        rgba(56, 189, 248, 0.15);
+
+    color: #38bdf8;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+}
+
+
+.purple-label {
+    background:
+        rgba(139, 92, 246, 0.18);
+
+    color: #a78bfa;
+}
+
+
+.subsection-content h3 {
+    margin: 0 0 16px;
+
+    font-size: 34px;
+
+    line-height: 1.1;
+}
+
+
+.subsection-content p {
+    margin: 0 0 25px;
+
+    color: #bfd0e3;
+
+    line-height: 1.6;
+}
+
+
+.subsection-button {
+    display: inline-flex;
+
+    padding: 13px 25px;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.blue-button {
+    background:
+        linear-gradient(
+            90deg,
+            #22d3ee,
+            #38bdf8
+        );
+
+    color: #03111d;
+}
+
+
+.purple-button {
+    background:
+        linear-gradient(
+            90deg,
+            #8b5cf6,
+            #7c3aed
+        );
+
+    color: white;
+}
+
+
+.subsection-button:hover {
+    transform: translateY(-3px);
+}
+
+
+.subsection-image {
+    width: 100%;
+
+    height: 260px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+}
+
+
+.subsection-one .subsection-image {
+    border:
+        1px solid
+        rgba(34, 211, 238, 0.45);
+
+    box-shadow:
+        0 0 20px
+        rgba(34, 211, 238, 0.12);
+}
+
+
+.subsection-two .subsection-image {
+    border:
+        1px solid
+        rgba(168, 85, 247, 0.48);
+
+    box-shadow:
+        0 0 20px
+        rgba(168, 85, 247, 0.14);
+}
+
+
+.subsection-image img {
+    width: 100%;
+    max-width: 320px;
+
+    max-height: 235px;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+
+    transition: 0.35s;
+}
+
+
+.subsection-card:hover
+.subsection-image img {
+    transform: scale(1.035);
+}
+
+
+/* =========================================
+   NAVEGACIÓN
+========================================= */
+
+.module-navigation {
+    display: grid;
+
+    grid-template-columns:
+        auto 1fr auto;
+
+    align-items: center;
+
+    gap: 30px;
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    padding: 20px 60px 55px;
+}
+
+
+.navigation-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 12px 25px;
+
+    color: white;
+
+    border: 1px solid #38bdf8;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.navigation-button:hover {
+    background: #38bdf8;
+
+    color: #07101f;
+}
+
+
+/* =========================================
+   PROGRESO
+========================================= */
+
+.module-progress {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: center;
+}
+
+
+.progress-item {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    min-width: 65px;
+}
+
+
+.progress-dot {
+    width: 18px;
+    height: 18px;
+
+    background: #07101f;
+
+    border: 2px solid #7395b6;
+
+    border-radius: 50%;
+}
+
+
+.progress-item p {
+    margin-top: 8px;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+.active-progress .progress-dot {
+    background: #22bdf2;
+
+    border-color: #22bdf2;
+
+    box-shadow:
+        0 0 12px
+        rgba(34, 189, 242, 0.55);
+}
+
+
+.active-progress p {
+    color: #22bdf2;
+}
+
+
+.progress-line {
+    width: 55px;
+    height: 1px;
+
+    margin-top: 9px;
+
+    background: #52708b;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .module-hero {
+        grid-template-columns: 1fr;
+
+        padding: 40px 30px;
+    }
+
+    .subsections-container {
+        grid-template-columns: 1fr;
+
+        padding:
+            20px 30px 40px;
+    }
+
+    .module-navigation {
+        grid-template-columns: 1fr;
+
+        justify-items: center;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .module-header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+    .module-hero {
+        padding: 35px 20px;
+    }
+
+    .module-hero-text h2 {
+        font-size: 42px;
+    }
+
+    .subsections-container {
+        padding: 15px 20px 35px;
+    }
+
+    .subsection-card {
+        grid-template-columns: 1fr;
+
+        padding: 28px;
+    }
+
+    .module-progress {
+        transform: scale(0.78);
+    }
+
+}

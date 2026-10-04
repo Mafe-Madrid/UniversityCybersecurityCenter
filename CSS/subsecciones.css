@@ -1,0 +1,859 @@
+/* =========================================
+   GENERAL
+========================================= */
+
+.lesson-main {
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            180deg,
+            #07101f,
+            #081426
+        );
+
+    color: white;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.lesson-hero {
+    display: grid;
+
+    grid-template-columns:
+        1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 60px;
+
+    max-width: 1350px;
+
+    margin: auto;
+
+    padding: 60px 50px;
+}
+
+
+.lesson-route {
+    margin-bottom: 20px;
+
+    color: #7f9bb8;
+
+    font-size: 14px;
+}
+
+
+.lesson-route span {
+    margin: 0 8px;
+
+    color: #38bdf8;
+}
+
+
+.lesson-label {
+    display: inline-block;
+
+    padding: 7px 15px;
+
+    margin-bottom: 18px;
+
+    color: #38bdf8;
+
+    border:
+        1px solid
+        rgba(56, 189, 248, 0.55);
+
+    border-radius: 20px;
+
+    font-size: 13px;
+}
+
+
+.purple-lesson-label {
+    color: #a78bfa;
+
+    border-color:
+        rgba(168, 85, 247, 0.55);
+}
+
+
+.lesson-hero-text h2 {
+    margin: 0 0 20px;
+
+    font-size: 55px;
+
+    line-height: 1.05;
+}
+
+
+.lesson-hero-text > p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #bfd0e3;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+.lesson-hero-image {
+    height: 330px;
+
+    padding: 10px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(56, 189, 248, 0.5);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 0 25px
+        rgba(56, 189, 248, 0.12);
+}
+
+
+.purple-image {
+    border-color:
+        rgba(168, 85, 247, 0.6);
+
+    box-shadow:
+        0 0 25px
+        rgba(168, 85, 247, 0.15);
+}
+
+
+.lesson-hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 17px;
+}
+
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+.lesson-section {
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 45px 50px;
+}
+
+
+.lesson-section-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+
+.section-number {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    background:
+        rgba(56, 189, 248, 0.12);
+
+    color: #38bdf8;
+
+    border:
+        1px solid
+        rgba(56, 189, 248, 0.45);
+
+    border-radius: 14px;
+
+    font-weight: bold;
+}
+
+
+.purple-number {
+    background:
+        rgba(168, 85, 247, 0.12);
+
+    color: #a78bfa;
+
+    border-color:
+        rgba(168, 85, 247, 0.45);
+}
+
+
+.lesson-section-header h3 {
+    margin: 0 0 7px;
+
+    font-size: 31px;
+}
+
+
+.lesson-section-header p {
+    margin: 0;
+
+    color: #8da7c1;
+}
+
+
+/* =========================================
+   TEXTO
+========================================= */
+
+.lesson-text-card {
+    padding: 30px;
+
+    background:
+        rgba(15, 30, 52, 0.75);
+
+    border: 1px solid #203c57;
+
+    border-radius: 20px;
+}
+
+
+.lesson-text-card p {
+    margin: 0 0 18px;
+
+    color: #c5d5e5;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+.source-note {
+    margin-top: 25px;
+
+    padding-top: 15px;
+
+    color: #738da7;
+
+    border-top:
+        1px solid #203c57;
+
+    font-size: 13px;
+}
+
+
+.source-block {
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   EJEMPLOS
+========================================= */
+
+.lesson-highlight {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(10, 32, 57, 0.55),
+            rgba(8, 21, 39, 0.3)
+        );
+
+    border-radius: 25px;
+}
+
+
+.example-grid,
+.threat-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+.example-card,
+.threat-card {
+    padding: 25px;
+
+    background:
+        rgba(9, 25, 45, 0.85);
+
+    border: 1px solid #1c3b56;
+
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+
+.example-card:hover,
+.threat-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #38bdf8;
+}
+
+
+.threat-card:hover {
+    border-color: #a855f7;
+}
+
+
+.example-icon,
+.threat-icon {
+    margin-bottom: 15px;
+
+    font-size: 31px;
+}
+
+
+.example-card h4,
+.threat-card h4 {
+    margin: 0 0 10px;
+
+    font-size: 18px;
+}
+
+
+.example-card p,
+.threat-card p {
+    margin: 0;
+
+    color: #99afc5;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   CIA
+========================================= */
+
+.interaction-heading {
+    margin-bottom: 30px;
+
+    text-align: center;
+}
+
+
+.interaction-tag {
+    display: inline-block;
+
+    padding: 7px 14px;
+
+    margin-bottom: 13px;
+
+    background:
+        rgba(56, 189, 248, 0.12);
+
+    color: #38bdf8;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+}
+
+
+.purple-tag {
+    background:
+        rgba(168, 85, 247, 0.13);
+
+    color: #a78bfa;
+}
+
+
+.interaction-heading h3 {
+    margin: 0 0 10px;
+
+    font-size: 32px;
+}
+
+
+.interaction-heading p {
+    margin: 0;
+
+    color: #8fa8bf;
+}
+
+
+.cia-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+.cia-card {
+    min-height: 260px;
+
+    padding: 28px;
+
+    background: #0b1729;
+
+    color: white;
+
+    border: 1px solid #29435e;
+
+    border-radius: 20px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.cia-card:hover,
+.cia-card.selected {
+    transform: translateY(-6px);
+
+    border-color: #38bdf8;
+
+    box-shadow:
+        0 10px 30px
+        rgba(56, 189, 248, 0.14);
+}
+
+
+.cia-letter {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 20px;
+
+    background:
+        rgba(56, 189, 248, 0.12);
+
+    color: #38bdf8;
+
+    border-radius: 13px;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+.cia-card h4 {
+    margin: 0 0 12px;
+
+    font-size: 21px;
+}
+
+
+.cia-card p {
+    margin: 0 0 20px;
+
+    color: #9fb4c9;
+
+    line-height: 1.6;
+}
+
+
+.cia-action {
+    color: #38bdf8;
+
+    font-weight: bold;
+}
+
+
+.cia-result {
+    margin-top: 25px;
+
+    padding: 25px;
+
+    background:
+        rgba(56, 189, 248, 0.06);
+
+    color: #c5d9eb;
+
+    border:
+        1px dashed
+        rgba(56, 189, 248, 0.45);
+
+    border-radius: 17px;
+
+    line-height: 1.6;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   CONCEPTOS
+========================================= */
+
+.concept-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.concept-card {
+    padding: 28px;
+
+    background: #0b1729;
+
+    border:
+        1px solid
+        rgba(168, 85, 247, 0.28);
+
+    border-radius: 18px;
+}
+
+
+.concept-card span {
+    color: #a78bfa;
+
+    font-size: 13px;
+}
+
+
+.concept-card h4 {
+    margin: 10px 0;
+
+    font-size: 21px;
+}
+
+
+.concept-card p {
+    margin: 0;
+
+    color: #9fb4c9;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   QUIZ
+========================================= */
+
+.quiz-box {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #11102c,
+            #0b1528
+        );
+
+    border:
+        1px solid
+        rgba(168, 85, 247, 0.5);
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 0 25px
+        rgba(168, 85, 247, 0.08);
+}
+
+
+.quiz-counter {
+    color: #a78bfa;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+.quiz-box h4 {
+    margin: 15px 0 25px;
+
+    font-size: 23px;
+
+    line-height: 1.5;
+}
+
+
+.quiz-options {
+    display: grid;
+
+    gap: 12px;
+}
+
+
+.quiz-option {
+    width: 100%;
+
+    padding: 15px 18px;
+
+    background: #101d30;
+
+    color: white;
+
+    border: 1px solid #29435e;
+
+    border-radius: 12px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+
+.quiz-option:hover {
+    border-color: #a855f7;
+}
+
+
+.quiz-option.correct {
+    border-color: #22c55e;
+
+    background:
+        rgba(34, 197, 94, 0.12);
+}
+
+
+.quiz-option.incorrect {
+    border-color: #ef4444;
+
+    background:
+        rgba(239, 68, 68, 0.12);
+}
+
+
+.quiz-feedback {
+    min-height: 45px;
+
+    margin-top: 20px;
+
+    color: #bfd0e3;
+
+    line-height: 1.5;
+}
+
+
+.quiz-next {
+    margin-top: 15px;
+
+    padding: 12px 24px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #8b5cf6,
+            #7c3aed
+        );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 22px;
+
+    cursor: pointer;
+}
+
+
+.quiz-next:disabled {
+    opacity: 0.4;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   MENSAJES
+========================================= */
+
+.key-message {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    max-width: 1150px;
+
+    margin:
+        25px auto 50px;
+
+    padding: 30px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(14, 116, 144, 0.15),
+            rgba(56, 189, 248, 0.06)
+        );
+
+    border-left:
+        4px solid #38bdf8;
+
+    border-radius: 15px;
+}
+
+
+.purple-key {
+    border-left-color: #a855f7;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(126, 34, 206, 0.16),
+            rgba(76, 29, 149, 0.06)
+        );
+}
+
+
+.key-icon {
+    font-size: 40px;
+}
+
+
+.key-message span {
+    color: #38bdf8;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.purple-key span {
+    color: #a78bfa;
+}
+
+
+.key-message p {
+    margin: 8px 0 0;
+
+    color: #bfd0e3;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   NAVEGACIÓN
+========================================= */
+
+.lesson-navigation {
+    display: grid;
+
+    grid-template-columns:
+        auto 1fr auto;
+
+    align-items: center;
+
+    gap: 30px;
+
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding: 20px 50px 60px;
+}
+
+
+.lesson-progress-text {
+    color: #718aa2;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 950px) {
+
+    .lesson-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .example-grid,
+    .threat-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .cia-grid,
+    .concept-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .lesson-hero {
+        padding: 40px 20px;
+    }
+
+    .lesson-hero-text h2 {
+        font-size: 40px;
+    }
+
+    .lesson-section {
+        padding: 35px 20px;
+    }
+
+    .example-grid,
+    .threat-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lesson-navigation {
+        grid-template-columns: 1fr;
+
+        padding:
+            20px 20px 50px;
+    }
+
+    .key-message {
+        margin:
+            20px 20px 40px;
+    }
+
+}
