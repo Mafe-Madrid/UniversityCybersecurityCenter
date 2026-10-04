@@ -1,85 +1,142 @@
 <!DOCTYPE html>
+
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>University Cybersecurity Center</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="CSS/style.css">
+    <title>
+        University Cybersecurity Center
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="CSS/style.css"
+    >
+
 </head>
+
 
 <body>
 
+
     <!-- =========================================
         HERO / ENCABEZADO PRINCIPAL
-    ========================================= -->
+    ========================================== -->
 
-    <section class="cyber-hero">
+    <section
+        class="cyber-hero"
+        id="inicio"
+    >
+
 
         <!-- Barra superior -->
+
         <header class="hero-header">
 
+
             <h1 class="site-title">
+
                 University
-                <span>Cybersecurity Center</span>
+
+                <span>
+                    Cybersecurity Center
+                </span>
+
             </h1>
 
+
             <div class="language">
-                <button id="btn-es" class="language-active">
+
+                <button
+                    id="btn-es"
+                    class="language-active"
+                    type="button"
+                >
                     ES
                 </button>
 
-                <button id="btn-en">
+
+                <button
+                    id="btn-en"
+                    type="button"
+                >
                     EN
                 </button>
+
             </div>
+
 
         </header>
 
 
+
         <!-- Contenido central -->
+
         <div class="hero-content">
 
+
             <h2 class="hero-title">
+
                 Ciberseguridad
+
             </h2>
 
+
             <p class="hero-description">
+
                 Aprende a proteger tu información,
                 tus cuentas y tus dispositivos.
+
             </p>
+
 
             <div class="hero-line"></div>
 
 
+
             <!-- CARRUSEL DE FRASES -->
+
             <div class="quote-carousel">
+
 
                 <button
                     class="quote-arrow"
                     id="quotePrev"
                     aria-label="Frase anterior"
+                    type="button"
                 >
                     &#10094;
                 </button>
 
 
+
                 <div class="quote-card">
+
 
                     <span class="quote-symbol quote-start">
                         “
                     </span>
 
+
                     <p id="quoteText">
+
                         Los aficionados hackean sistemas;
                         los profesionales hackean personas.
+
                     </p>
+
 
                     <span class="quote-symbol quote-end">
                         ”
                     </span>
+
 
                     <span
                         class="quote-author"
@@ -87,478 +144,770 @@
                     >
                         Bruce Schneier
                     </span>
+
+
                     <div class="quote-small-line"></div>
 
+
                 </div>
+
 
 
                 <button
                     class="quote-arrow"
                     id="quoteNext"
                     aria-label="Frase siguiente"
+                    type="button"
                 >
                     &#10095;
                 </button>
 
+
             </div>
 
 
+
             <!-- Indicadores -->
+
             <div class="quote-dots">
+
 
                 <button
                     class="quote-dot active-dot"
                     data-quote="0"
+                    type="button"
+                    aria-label="Frase 1"
                 ></button>
+
 
                 <button
                     class="quote-dot"
                     data-quote="1"
+                    type="button"
+                    aria-label="Frase 2"
                 ></button>
+
 
                 <button
                     class="quote-dot"
                     data-quote="2"
+                    type="button"
+                    aria-label="Frase 3"
                 ></button>
+
 
             </div>
 
+
         </div>
+
 
     </section>
 
-    <!-- CONTENIDO PRINCIPAL -->
+
+
+    <!-- =========================================
+         CONTENIDO PRINCIPAL
+    ========================================== -->
+
     <main>
 
-        <!-- SECCIÓN DE MÓDULOS -->
-        <section class="modules-section">
+
+
+        <!-- =========================================
+             SECCIÓN DE MÓDULOS
+        ========================================== -->
+
+        <section
+            class="modules-section"
+            id="modulos"
+        >
+
 
             <h2 class="modules-title">
+
                 Explora los módulos
+
             </h2>
+
 
 
             <div class="carousel">
 
+
                 <!-- FLECHA IZQUIERDA -->
+
                 <button
                     class="carousel-button prev"
                     id="prevBtn"
                     aria-label="Módulo anterior"
+                    type="button"
                 >
                     &#10094;
                 </button>
 
 
+
                 <!-- CONTENEDOR DEL CARRUSEL -->
+
                 <div class="carousel-container">
 
 
-                    <!-- MÓDULO 1 -->
+
+                    <!-- =========================================
+                         MÓDULO 1
+                    ========================================== -->
+
                     <article
                         class="module-card"
                         data-index="0"
                     >
 
+
                         <div class="module-image">
-                            <img src="IMAGENES/Modulo1.jpeg"
-                            alt="Riesgos digitales"
+
+                            <img
+                                src="IMAGENES/Modulo1.jpeg"
+                                alt="Riesgos digitales"
                             >
+
                         </div>
+
 
                         <h3>
                             Módulo 1
                         </h3>
 
+
                         <p>
                             Riesgos digitales
                         </p>
 
-                        <button class="module-button">
+
+                        <button
+                            class="module-button"
+                            type="button"
+                            onclick="window.location.href='MODULOS/Modulo1/Modulo_1.html'"
+                        >
                             Explorar módulo
                         </button>
+
 
                     </article>
 
 
-                    <!-- MÓDULO 2 -->
+
+                    <!-- =========================================
+                         MÓDULO 2
+                    ========================================== -->
+
                     <article
                         class="module-card"
                         data-index="1"
                     >
 
+
                         <div class="module-image">
-                            <img src="IMAGENES/Modulo2.jpeg"
-                            alt="Contraseñas y cuentas"
+
+                            <img
+                                src="IMAGENES/Modulo2.jpeg"
+                                alt="Contraseñas y cuentas"
                             >
+
                         </div>
+
 
                         <h3>
                             Módulo 2
                         </h3>
 
+
                         <p>
                             Contraseñas y cuentas
                         </p>
 
-                        <button class="module-button">
+
+                        <button
+                            class="module-button"
+                            type="button"
+                            onclick="window.location.href='MODULOS/Modulo2/Modulo_2.html'"
+                        >
                             Explorar módulo
                         </button>
+
 
                     </article>
 
 
-                    <!-- MÓDULO 3 -->
+
+                    <!-- =========================================
+                         MÓDULO 3
+                    ========================================== -->
+
                     <article
                         class="module-card"
                         data-index="2"
                     >
 
+
                         <div class="module-image">
-                            <img src="IMAGENES/Modulo3.jpeg"
-                            alt="Phishing"
+
+                            <img
+                                src="IMAGENES/Modulo3.jpeg"
+                                alt="Phishing y engaños digitales"
                             >
+
                         </div>
+
 
                         <h3>
                             Módulo 3
                         </h3>
 
+
                         <p>
-                            Phishing
+                            Phishing y engaños digitales
                         </p>
 
-                        <button class="module-button">
+
+                        <button
+                            class="module-button"
+                            type="button"
+                            onclick="window.location.href='MODULOS/Modulo3/Modulo_3.html'"
+                        >
                             Explorar módulo
                         </button>
+
 
                     </article>
 
 
-                    <!-- MÓDULO 4 -->
+
+                    <!-- =========================================
+                         MÓDULO 4
+                    ========================================== -->
+
                     <article
                         class="module-card"
                         data-index="3"
                     >
 
+
                         <div class="module-image">
-                            <img src="IMAGENES/Modulo4.jpeg"
-                            alt="Redes y navegación segura"
+
+                            <img
+                                src="IMAGENES/Modulo4.jpeg"
+                                alt="Redes y navegación segura"
                             >
+
                         </div>
+
 
                         <h3>
                             Módulo 4
                         </h3>
 
+
                         <p>
                             Redes y navegación segura
                         </p>
 
-                        <button class="module-button">
+
+                        <button
+                            class="module-button"
+                            type="button"
+                            onclick="window.location.href='MODULOS/Modulo4/Modulo_4.html'"
+                        >
                             Explorar módulo
                         </button>
+
 
                     </article>
 
 
-                    <!-- MÓDULO 5 -->
+
+                    <!-- =========================================
+                         MÓDULO 5
+                    ========================================== -->
+
                     <article
                         class="module-card"
                         data-index="4"
                     >
 
+
                         <div class="module-image">
-                            <img src="IMAGENES/Modulo5.jpeg"
-                            alt="Dispositivos y datos"
+
+                            <img
+                                src="IMAGENES/Modulo5.jpeg"
+                                alt="Dispositivos y datos personales"
                             >
+
                         </div>
+
 
                         <h3>
                             Módulo 5
                         </h3>
 
+
                         <p>
-                            Dispositivos y datos
+                            Dispositivos y datos personales
                         </p>
 
-                        <button class="module-button">
+
+                        <button
+                            class="module-button"
+                            type="button"
+                            onclick="window.location.href='MODULOS/Modulo5/Modulo_5.html'"
+                        >
                             Explorar módulo
                         </button>
 
+
                     </article>
+
 
                 </div>
 
 
+
                 <!-- FLECHA DERECHA -->
+
                 <button
                     class="carousel-button next"
                     id="nextBtn"
                     aria-label="Módulo siguiente"
+                    type="button"
                 >
                     &#10095;
                 </button>
 
+
             </div>
+
 
         </section>
 
-<!-- =========================================
-  ACTUALIDAD EN CIBERSEGURIDAD
-========================================= -->
 
-        <section class="news-section">
+
+        <!-- =========================================
+             ACTUALIDAD EN CIBERSEGURIDAD
+        ========================================== -->
+
+        <section
+            class="news-section"
+            id="noticias"
+        >
+
 
             <div class="news-header">
 
+
                 <span class="news-label">
+
                     Actualidad
+
                 </span>
 
+
                 <h2>
+
                     Noticias de ciberseguridad
+
                 </h2>
 
+
                 <p>
+
                     Conoce alertas, vulnerabilidades y novedades
                     relevantes del mundo digital.
+
                 </p>
 
+
             </div>
+
 
 
             <div class="news-grid">
 
+
+
                 <!-- NOTICIA 1 -->
+
                 <article class="news-card">
 
+
                     <div class="news-image">
+
                         <img
-                            src="IMAGENES/noticia1.jpg"
+                            src="IMAGENES/noticia1.png"
                             alt="Noticia de ciberseguridad"
                         >
+
                     </div>
+
 
                     <div class="news-content">
 
+
                         <span class="news-category">
+
                             Vulnerabilidad
+
                         </span>
 
+
                         <h3>
+
                             Título de la noticia 1
+
                         </h3>
 
+
                         <p>
+
                             Aquí aparecerá un breve resumen
                             de la noticia seleccionada.
+
                         </p>
 
-                        <a href="#" class="news-button">
+
+                        <a
+                            href="#"
+                            class="news-button"
+                        >
                             Leer más
                         </a>
 
+
                     </div>
 
+
                 </article>
+
 
 
                 <!-- NOTICIA 2 -->
+
                 <article class="news-card">
 
+
                     <div class="news-image">
+
                         <img
-                            src="IMAGENES/noticia2.jpg"
+                            src="IMAGENES/noticia2.png"
                             alt="Noticia de ciberseguridad"
                         >
+
                     </div>
+
 
                     <div class="news-content">
 
+
                         <span class="news-category">
+
                             Phishing
+
                         </span>
 
+
                         <h3>
+
                             Título de la noticia 2
+
                         </h3>
 
+
                         <p>
+
                             Aquí aparecerá un breve resumen
                             de la noticia seleccionada.
+
                         </p>
 
-                        <a href="#" class="news-button">
+
+                        <a
+                            href="#"
+                            class="news-button"
+                        >
                             Leer más
                         </a>
 
+
                     </div>
 
+
                 </article>
+
 
 
                 <!-- NOTICIA 3 -->
+
                 <article class="news-card">
 
+
                     <div class="news-image">
+
                         <img
-                            src="IMAGENES/noticia3.jpg"
+                            src="IMAGENES/noticia3.png"
                             alt="Noticia de ciberseguridad"
                         >
+
                     </div>
+
 
                     <div class="news-content">
 
+
                         <span class="news-category">
+
                             Malware
+
                         </span>
 
+
                         <h3>
+
                             Título de la noticia 3
+
                         </h3>
 
+
                         <p>
+
                             Aquí aparecerá un breve resumen
                             de la noticia seleccionada.
+
                         </p>
 
-                        <a href="#" class="news-button">
+
+                        <a
+                            href="#"
+                            class="news-button"
+                        >
                             Leer más
                         </a>
 
+
                     </div>
 
+
                 </article>
+
 
 
                 <!-- NOTICIA 4 -->
+
                 <article class="news-card">
 
+
                     <div class="news-image">
+
                         <img
-                            src="IMAGENES/noticia4.jpg"
+                            src="IMAGENES/noticia4.png"
                             alt="Noticia de ciberseguridad"
                         >
+
                     </div>
+
 
                     <div class="news-content">
 
+
                         <span class="news-category">
+
                             Privacidad
+
                         </span>
 
+
                         <h3>
+
                             Título de la noticia 4
+
                         </h3>
 
+
                         <p>
+
                             Aquí aparecerá un breve resumen
                             de la noticia seleccionada.
+
                         </p>
 
-                        <a href="#" class="news-button">
+
+                        <a
+                            href="#"
+                            class="news-button"
+                        >
                             Leer más
                         </a>
 
+
                     </div>
+
 
                 </article>
 
+
             </div>
+
 
         </section>
 
+
     </main>
-<!-- =========================================
-     PIE DE PÁGINA
-========================================= -->
+
+
+
+    <!-- =========================================
+         PIE DE PÁGINA
+    ========================================== -->
 
     <footer class="site-footer">
 
+
         <div class="footer-container">
 
+
             <!-- BLOQUE 1 -->
+
             <div class="footer-brand">
 
+
                 <h2>
+
                     University
-                    <span>Cybersecurity Center</span>
+
+                    <span>
+                        Cybersecurity Center
+                    </span>
+
                 </h2>
 
+
                 <p>
+
                     Recurso educativo multimedia orientado
                     a fortalecer las buenas prácticas de
                     ciberseguridad en estudiantes universitarios.
+
                 </p>
 
+
             </div>
+
 
 
             <!-- BLOQUE 2 -->
+
             <div class="footer-links">
 
+
                 <h3>
+
                     Navegación
+
                 </h3>
 
+
                 <a href="#inicio">
+
                     Inicio
+
                 </a>
+
 
                 <a href="#modulos">
+
                     Módulos
+
                 </a>
+
 
                 <a href="#noticias">
+
                     Actualidad
+
                 </a>
+
 
                 <a href="creditos.html">
+
                     Créditos y referencias
+
                 </a>
 
+
             </div>
+
 
 
             <!-- BLOQUE 3 -->
+
             <div class="footer-project">
 
+
                 <h3>
+
                     Proyecto académico
+
                 </h3>
 
+
                 <p>
+
                     Aplicaciones Multimedia
+
                 </p>
 
+
                 <p>
+
                     Universidad Nacional Abierta y a Distancia - UNAD
+
                 </p>
 
+
                 <p>
+
                     2026
+
                 </p>
+
 
             </div>
 
+
         </div>
+
 
 
         <!-- LÍNEA INFERIOR -->
+
         <div class="footer-bottom">
 
+
             <p>
+
                 University Cybersecurity Center
                 · Proyecto educativo de ciberseguridad
+
             </p>
 
+
         </div>
+
 
     </footer>
 
 
+
     <script src="JAVASCRIPT/script.js"></script>
+
 
 </body>
 
