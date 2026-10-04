@@ -1,0 +1,525 @@
+/* =========================================
+   CREDITOS - GENERAL
+========================================= */
+
+body {
+    margin: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            #06101f,
+            #081426
+        );
+
+    color: #ffffff;
+}
+
+
+.credits-main {
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.credits-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 22px 55px;
+
+    background:
+        rgba(6, 16, 31, 0.96);
+
+    border-bottom:
+        1px solid #1d3953;
+}
+
+
+.credits-brand {
+    color: #ffffff;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+
+.credits-brand span {
+    color: #38bdf8;
+}
+
+
+.credits-language {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.credits-language button {
+    padding: 8px 14px;
+
+    background: transparent;
+
+    color: white;
+
+    border:
+        1px solid #38bdf8;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+
+.credits-language button:hover,
+.credits-language
+.credits-language-active {
+    background: #38bdf8;
+
+    color: #07101f;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.credits-hero {
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding:
+        75px 50px 55px;
+}
+
+
+.credits-label {
+    display: inline-block;
+
+    padding:
+        7px 15px;
+
+    color: #38bdf8;
+
+    border:
+        1px solid
+        rgba(56, 189, 248, 0.5);
+
+    border-radius: 20px;
+
+    font-size: 12px;
+}
+
+
+.credits-hero h1 {
+    margin:
+        18px 0;
+
+    font-size: 55px;
+}
+
+
+.credits-hero p {
+    max-width: 750px;
+
+    color: #aec2d6;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+.credits-back {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding:
+        11px 20px;
+
+    color: #38bdf8;
+
+    border:
+        1px solid #38bdf8;
+
+    border-radius: 24px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+
+.credits-back:hover {
+    background: #38bdf8;
+
+    color: #06101f;
+}
+
+
+/* =========================================
+   SECCIONES
+========================================= */
+
+.credits-section {
+    max-width: 1250px;
+
+    margin: auto;
+
+    padding:
+        45px 50px;
+}
+
+
+.credits-section-heading {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+.credits-number {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    flex-shrink: 0;
+
+    background:
+        rgba(56, 189, 248, 0.1);
+
+    color: #38bdf8;
+
+    border:
+        1px solid
+        rgba(56, 189, 248, 0.4);
+
+    border-radius: 14px;
+
+    font-weight: bold;
+}
+
+
+.credits-section-heading h2 {
+    margin: 0 0 7px;
+
+    font-size: 31px;
+}
+
+
+.credits-section-heading p {
+    margin: 0;
+
+    color: #8da7c1;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   REFERENCIAS
+========================================= */
+
+.references-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 16px;
+}
+
+
+.reference-card {
+    padding: 22px;
+
+    background:
+        rgba(11, 23, 41, 0.9);
+
+    border:
+        1px solid #203c57;
+
+    border-radius: 16px;
+
+    transition: 0.3s;
+}
+
+
+.reference-card:hover {
+    transform:
+        translateY(-3px);
+
+    border-color:
+        #38bdf8;
+}
+
+
+.reference-type {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #38bdf8;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.reference-card p {
+    margin:
+        0 0 12px;
+
+    color: #c3d2e1;
+
+    line-height: 1.6;
+}
+
+
+.reference-card a {
+    color: #38bdf8;
+
+    font-size: 13px;
+
+    text-decoration: none;
+}
+
+
+.reference-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   IA
+========================================= */
+
+.ai-section {
+    margin-top: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(91, 33, 182, 0.12),
+            rgba(14, 116, 144, 0.08)
+        );
+
+    border-radius: 25px;
+}
+
+
+.ai-credit-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    background:
+        rgba(12, 24, 44, 0.8);
+
+    border:
+        1px solid
+        rgba(168, 85, 247, 0.4);
+
+    border-radius: 20px;
+}
+
+
+.ai-credit-icon {
+    font-size: 45px;
+
+    color: #a78bfa;
+}
+
+
+.ai-credit-box h3 {
+    margin:
+        0 0 10px;
+}
+
+
+.ai-credit-box p {
+    margin: 0;
+
+    color: #b8c8d8;
+
+    line-height: 1.7;
+}
+
+
+.ai-resources-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+
+.ai-resources-grid article {
+    padding: 20px;
+
+    background:
+        rgba(10, 23, 43, 0.8);
+
+    border:
+        1px solid #293f58;
+
+    border-radius: 15px;
+}
+
+
+.ai-resources-grid span {
+    color: #a78bfa;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.ai-resources-grid p {
+    margin:
+        9px 0 0;
+
+    color: #aebed0;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   PROYECTO
+========================================= */
+
+.project-credit {
+    padding: 30px;
+
+    background:
+        #0b1729;
+
+    border:
+        1px solid #203c57;
+
+    border-radius: 20px;
+}
+
+
+.project-credit p {
+    color: #becfe0;
+
+    line-height: 1.7;
+}
+
+
+.project-credit strong {
+    color: #38bdf8;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.credits-footer {
+    margin-top: 50px;
+
+    padding: 25px;
+
+    color: #71869b;
+
+    background: #050d18;
+
+    border-top: 1px solid #172b40;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .references-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    .ai-resources-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .credits-header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px;
+    }
+
+
+    .credits-hero {
+        padding:
+            50px 20px 35px;
+    }
+
+
+    .credits-hero h1 {
+        font-size: 40px;
+    }
+
+
+    .credits-section {
+        padding:
+            35px 20px;
+    }
+
+
+    .ai-resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .ai-credit-box {
+        align-items: flex-start;
+    }
+
+}
