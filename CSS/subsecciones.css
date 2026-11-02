@@ -1430,31 +1430,28 @@
 
 }
 /* =========================================
-   BOTÓN CENTRAL - VOLVER AL MÓDULO
+   NAVEGACIÓN CENTRAL SUBSECCIÓN 2
 ========================================= */
 
 .lesson-navigation-center {
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
-
-    gap: 12px;
+    gap: 10px;
 }
 
-
 .lesson-navigation-center .navigation-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
-
 .lesson-navigation-center .lesson-progress-text {
     display: block;
-
     margin: 0;
+    text-align: center;
 }
 
 
@@ -1470,7 +1467,6 @@
 
     .lesson-navigation-center .navigation-button {
         width: 100%;
-
         text-align: center;
     }
 
