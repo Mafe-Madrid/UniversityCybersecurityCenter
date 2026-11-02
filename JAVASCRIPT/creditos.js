@@ -57,7 +57,10 @@ const creditsTranslations = {
             "Institución:",
 
         year:
-            "Año:"
+            "Año:",
+        
+        aiToolLink:
+            "Consultar herramienta ↗"
 
     },
 
@@ -119,7 +122,10 @@ const creditsTranslations = {
             "Institution:",
 
         year:
-            "Year:"
+            "Year:",
+
+        aiToolLink:
+            "View tool ↗"
 
     }
 
