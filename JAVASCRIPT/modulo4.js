@@ -1125,10 +1125,8 @@ const resetBrowserQuiz =
             "You completed the safe browsing activity."
 
     });
-
-
 /* =========================================================
-   PERSISTENCIA DEL IDIOMA ENTRE PÁGINAS
+   PERSISTENCIA DEL IDIOMA + TRADUCCIÓN DEL FOOTER
 ========================================================= */
 
 (function () {
@@ -1137,10 +1135,185 @@ const resetBrowserQuiz =
         "ucc-language";
 
 
-    /* -----------------------------------------
-       GUARDAR EL IDIOMA CUANDO EL USUARIO
-       PRESIONA ES O EN
-    ----------------------------------------- */
+    /* =========================================
+       TRADUCCIÓN DEL FOOTER
+    ========================================= */
+
+    function translateFooter(language) {
+
+        const footerText = {
+
+            es: {
+
+                description:
+                    "Recurso educativo multimedia para fortalecer buenas prácticas de ciberseguridad.",
+
+                navigation:
+                    "Navegación",
+
+                home:
+                    "Inicio",
+
+                modules:
+                    "Módulos",
+
+                credits:
+                    "Créditos y referencias",
+
+                academic:
+                    "Proyecto académico",
+
+                course:
+                    "Aplicaciones Multimedia",
+
+                university:
+                    "Universidad Nacional Abierta y a Distancia - UNAD",
+
+                bottom:
+                    "University Cybersecurity Center · Proyecto educativo de ciberseguridad"
+
+            },
+
+
+            en: {
+
+                description:
+                    "Educational multimedia resource designed to strengthen cybersecurity best practices.",
+
+                navigation:
+                    "Navigation",
+
+                home:
+                    "Home",
+
+                modules:
+                    "Modules",
+
+                credits:
+                    "Credits and references",
+
+                academic:
+                    "Academic project",
+
+                course:
+                    "Multimedia Applications",
+
+                university:
+                    "National Open and Distance University - UNAD",
+
+                bottom:
+                    "University Cybersecurity Center · Cybersecurity educational project"
+
+            }
+
+        };
+
+
+        const text =
+            footerText[language];
+
+
+        const footerDescription =
+            document.querySelector(
+                ".footer-brand p"
+            );
+
+
+        if (footerDescription) {
+
+            footerDescription.textContent =
+                text.description;
+
+        }
+
+
+        const footerTitle =
+            document.querySelector(
+                ".footer-links h3"
+            );
+
+
+        if (footerTitle) {
+
+            footerTitle.textContent =
+                text.navigation;
+
+        }
+
+
+        const footerLinks =
+            document.querySelectorAll(
+                ".footer-links a"
+            );
+
+
+        if (footerLinks.length >= 3) {
+
+            footerLinks[0].textContent =
+                text.home;
+
+            footerLinks[1].textContent =
+                text.modules;
+
+            footerLinks[2].textContent =
+                text.credits;
+
+        }
+
+
+        const projectTitle =
+            document.querySelector(
+                ".footer-project h3"
+            );
+
+
+        if (projectTitle) {
+
+            projectTitle.textContent =
+                text.academic;
+
+        }
+
+
+        const projectParagraphs =
+            document.querySelectorAll(
+                ".footer-project p"
+            );
+
+
+        if (projectParagraphs.length >= 3) {
+
+            projectParagraphs[0].textContent =
+                text.course;
+
+            projectParagraphs[1].textContent =
+                text.university;
+
+            projectParagraphs[2].textContent =
+                "2026";
+
+        }
+
+
+        const footerBottom =
+            document.querySelector(
+                ".footer-bottom p"
+            );
+
+
+        if (footerBottom) {
+
+            footerBottom.textContent =
+                text.bottom;
+
+        }
+
+    }
+
+
+    /* =========================================
+       GUARDAR IDIOMA
+    ========================================= */
 
     document.addEventListener(
         "click",
@@ -1148,7 +1321,7 @@ const resetBrowserQuiz =
 
             const button =
                 event.target.closest(
-                    ".language-btn, #btn-es, #btn-en, #credits-es, #credits-en"
+                    ".language-btn"
                 );
 
 
@@ -1157,63 +1330,9 @@ const resetBrowserQuiz =
             }
 
 
-            let language = null;
+            const language =
+                button.dataset.lang;
 
-
-            /* Botones de los módulos */
-
-            if (
-                button.dataset &&
-                button.dataset.lang
-            ) {
-
-                language =
-                    button.dataset.lang;
-
-            }
-
-
-            /* Botones de la página principal */
-
-            if (
-                button.id === "btn-es"
-            ) {
-
-                language = "es";
-
-            }
-
-
-            if (
-                button.id === "btn-en"
-            ) {
-
-                language = "en";
-
-            }
-
-
-            /* Botones de créditos */
-
-            if (
-                button.id === "credits-es"
-            ) {
-
-                language = "es";
-
-            }
-
-
-            if (
-                button.id === "credits-en"
-            ) {
-
-                language = "en";
-
-            }
-
-
-            /* Guardar selección */
 
             if (
                 language === "es" ||
@@ -1225,25 +1344,26 @@ const resetBrowserQuiz =
                     language
                 );
 
+
+                translateFooter(
+                    language
+                );
+
             }
 
         }
     );
 
 
-    /* -----------------------------------------
-       RECUPERAR EL IDIOMA GUARDADO
-    ----------------------------------------- */
+    /* =========================================
+       RECUPERAR IDIOMA
+    ========================================= */
 
     const savedLanguage =
         localStorage.getItem(
             LANGUAGE_KEY
         ) || "es";
 
-
-    /* -----------------------------------------
-       APLICARLO EN INDEX Y MÓDULOS
-    ----------------------------------------- */
 
     if (
         typeof changeLanguage ===
@@ -1257,19 +1377,8 @@ const resetBrowserQuiz =
     }
 
 
-    /* -----------------------------------------
-       APLICARLO EN CRÉDITOS
-    ----------------------------------------- */
-
-    else if (
-        typeof changeCreditsLanguage ===
-        "function"
-    ) {
-
-        changeCreditsLanguage(
-            savedLanguage
-        );
-
-    }
+    translateFooter(
+        savedLanguage
+    );
 
 })();
