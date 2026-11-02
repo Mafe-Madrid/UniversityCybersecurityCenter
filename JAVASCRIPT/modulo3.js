@@ -1086,3 +1086,151 @@ function resetClues() {
 loadPhishingQuestion();
 
 updateClueScore();
+
+
+/* =========================================================
+   PERSISTENCIA DEL IDIOMA ENTRE PÁGINAS
+========================================================= */
+
+(function () {
+
+    const LANGUAGE_KEY =
+        "ucc-language";
+
+
+    /* -----------------------------------------
+       GUARDAR EL IDIOMA CUANDO EL USUARIO
+       PRESIONA ES O EN
+    ----------------------------------------- */
+
+    document.addEventListener(
+        "click",
+        function(event) {
+
+            const button =
+                event.target.closest(
+                    ".language-btn, #btn-es, #btn-en, #credits-es, #credits-en"
+                );
+
+
+            if (!button) {
+                return;
+            }
+
+
+            let language = null;
+
+
+            /* Botones de los módulos */
+
+            if (
+                button.dataset &&
+                button.dataset.lang
+            ) {
+
+                language =
+                    button.dataset.lang;
+
+            }
+
+
+            /* Botones de la página principal */
+
+            if (
+                button.id === "btn-es"
+            ) {
+
+                language = "es";
+
+            }
+
+
+            if (
+                button.id === "btn-en"
+            ) {
+
+                language = "en";
+
+            }
+
+
+            /* Botones de créditos */
+
+            if (
+                button.id === "credits-es"
+            ) {
+
+                language = "es";
+
+            }
+
+
+            if (
+                button.id === "credits-en"
+            ) {
+
+                language = "en";
+
+            }
+
+
+            /* Guardar selección */
+
+            if (
+                language === "es" ||
+                language === "en"
+            ) {
+
+                localStorage.setItem(
+                    LANGUAGE_KEY,
+                    language
+                );
+
+            }
+
+        }
+    );
+
+
+    /* -----------------------------------------
+       RECUPERAR EL IDIOMA GUARDADO
+    ----------------------------------------- */
+
+    const savedLanguage =
+        localStorage.getItem(
+            LANGUAGE_KEY
+        ) || "es";
+
+
+    /* -----------------------------------------
+       APLICARLO EN INDEX Y MÓDULOS
+    ----------------------------------------- */
+
+    if (
+        typeof changeLanguage ===
+        "function"
+    ) {
+
+        changeLanguage(
+            savedLanguage
+        );
+
+    }
+
+
+    /* -----------------------------------------
+       APLICARLO EN CRÉDITOS
+    ----------------------------------------- */
+
+    else if (
+        typeof changeCreditsLanguage ===
+        "function"
+    ) {
+
+        changeCreditsLanguage(
+            savedLanguage
+        );
+
+    }
+
+})();
