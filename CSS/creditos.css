@@ -492,13 +492,13 @@ body {
 
         gap: 15px;
 
-        padding: 20px;
+        padding: 20px 24px;
     }
 
 
     .credits-hero {
         padding:
-            50px 20px 35px;
+            50px 24px 35px;
     }
 
 
@@ -509,7 +509,7 @@ body {
 
     .credits-section {
         padding:
-            35px 20px;
+            35px 24px;
     }
 
 

@@ -1044,7 +1044,7 @@ main {
 @media (max-width: 600px) {
 
     .news-section {
-        padding: 60px 20px;
+        padding: 60px 24px;
     }
 
     .news-header h2 {
@@ -1257,7 +1257,7 @@ footer {
     .footer-container {
         padding:
             40px
-            20px;
+            24px;
     }
 
 
@@ -1273,6 +1273,16 @@ footer {
 ========================================= */
 
 @media (max-width: 600px) {
+
+    .hero-content {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .modules-section {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
 
     .header {
         flex-direction: column;
